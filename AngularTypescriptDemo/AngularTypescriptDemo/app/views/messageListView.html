@@ -1,0 +1,32 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-group">
+        <a class="btn-default"  href="#!/addMessage">Add Message</a>
+    </div>
+    
+    <div class="panel-heading"
+         style="font-size:large">
+        {{::ml.title}}
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>UserId</td>
+                    <td>Id</td>
+                    <td>Title</td>
+                    <td>Body</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="message in ml.messages">
+                    <td>{{message.id}}</td>
+                    <td>{{message.userId}}</td>
+                    <td>{{message.title}}</td>
+                    <td>{{message.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

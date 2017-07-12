@@ -1,0 +1,41 @@
+﻿<div class="panel panel-primary" ng-controller="AddMessageCtrl as am">
+    <div class="panel-group">
+        <a class="btn-default" href="#!/messageList">Back</a>
+    </div>
+    <page-header-widget title={{am.pagetitle}}></page-header-widget>
+
+
+    <!--<div page-header-widget title={{am.pagetitle}}></div>-->
+
+    <div class="panel-body">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><label>UserId</label></td>
+                        <td><input type="text" ng-model="am.msgData.userId" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Id</label></td>
+                        <td><input type="text" ng-model="am.msgData.id" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Title</label></td>
+                        <td><input type="text" ng-model="am.msgData.title" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Body</label></td>
+                        <td><input type="text" ng-model="am.msgData.body" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input ng-click="am.PushMessage()"  type="submit" value="Add Message" class="btn" >
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+
+
+</div>
