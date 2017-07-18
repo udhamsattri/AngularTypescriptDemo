@@ -23,6 +23,7 @@ var app;
             MessageService.$inject = ["$http"];
             return MessageService;
         }());
+        services.MessageService = MessageService;
         angular
             .module("messageDemo")
             .service("MessageService", MessageService);

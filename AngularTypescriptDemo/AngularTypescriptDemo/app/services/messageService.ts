@@ -1,7 +1,7 @@
 ﻿module app.services {
 
 
-    class MessageService implements app.services.IMessageService {
+    export class MessageService implements app.services.IMessageService {
         httpService: ng.IHttpService;
 
         static $inject = ["$http"];
