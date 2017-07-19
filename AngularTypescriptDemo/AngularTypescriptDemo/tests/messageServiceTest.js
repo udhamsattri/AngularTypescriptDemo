@@ -5,10 +5,12 @@ describe("MessageService", function () {
     describe("getMessages", function () {
         var msgService;
         var httpBackend;
+        var http;
         var originalTimeout;
         //initialize all the dependencies
         beforeEach(angular.mock.inject(function ($http, _$httpBackend_) {
-            msgService = new app.services.MessageService($http);
+            http = $http;
+            msgService = new app.services.MessageService(http);
             httpBackend = _$httpBackend_;
         }));
         // make sure no expectations were missed in your tests.

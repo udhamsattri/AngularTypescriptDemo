@@ -9,16 +9,18 @@
     describe("getMessages", () => {
         let msgService: app.services.IMessageService;
         let httpBackend: ng.IHttpBackendService;
+        let http: ng.IHttpService;
         var originalTimeout;
 
 
         //initialize all the dependencies
         beforeEach(
             angular.mock.inject((
-                $http: ng.IHttpService,
+                $http,
                 _$httpBackend_
             ) => {
-                msgService = new app.services.MessageService($http);
+                http = $http;
+                msgService = new app.services.MessageService(http);
                 httpBackend = _$httpBackend_;                
             })
         );
@@ -33,6 +35,7 @@
             expect(msgService.getMessages).toBeDefined();
         });
 
+        
         it("should call the get messages URL", inject(function () {
 
             httpBackend.whenGET("http://jsonplaceholder.typicode.com/posts/").respond({ hello: 'World' });

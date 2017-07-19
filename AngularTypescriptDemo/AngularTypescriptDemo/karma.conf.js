@@ -15,15 +15,14 @@ module.exports = function (config) {
 
 
         // list of files / patterns to load in the browser
-        files: [
-            //'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-            //'node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
-            //'node_modules/jasmine-core/lib/jasmine-core/boot.js',
+        files: [            
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'node_modules/angular-route/angular-route.js',
-            'scripts/angular-resource.js',
-            'app/*.js',
+            'scripts/angular-resource.js',            
+            'app/app.js',
+            'app/domain/*.js',
+            'app/services/*.js',
             'tests/*Test.js'
         ],
 
@@ -42,7 +41,7 @@ module.exports = function (config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['kjhtml'],
 
 
         // web server port
