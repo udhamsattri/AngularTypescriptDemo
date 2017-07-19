@@ -10,7 +10,6 @@
         let msgService: app.services.IMessageService;
         let httpBackend: ng.IHttpBackendService;
         let http: ng.IHttpService;
-        var originalTimeout;
 
 
         //initialize all the dependencies

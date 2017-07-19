@@ -6,7 +6,6 @@ describe("MessageService", function () {
         var msgService;
         var httpBackend;
         var http;
-        var originalTimeout;
         //initialize all the dependencies
         beforeEach(angular.mock.inject(function ($http, _$httpBackend_) {
             http = $http;
