@@ -17,8 +17,11 @@
             .when('/addMessage',
             {
                 templateUrl: 'app/views/addMessage.html',
-                controllerAs: 'AddMessageCtrl as am'
+                controller: 'AddMessageCtrl as am'
             })            
             .otherwise('/messageList');
     }
 }
+
+
+ 
