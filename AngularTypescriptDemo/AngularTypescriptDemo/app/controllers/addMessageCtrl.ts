@@ -20,7 +20,7 @@
         PushMessage(): void {
 
             this.msgService.postMessage(this.msgData).then((result) => {
-                alert("Message Added Successfuslly");
+                alert("Message Added Successfully");
             })
                 .catch((reason: any) => {
                     alert("Some error occurred");

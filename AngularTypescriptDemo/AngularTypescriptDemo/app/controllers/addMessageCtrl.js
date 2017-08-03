@@ -14,7 +14,7 @@ var app;
             }
             AddMessageCtrl.prototype.PushMessage = function () {
                 this.msgService.postMessage(this.msgData).then(function (result) {
-                    alert("Message Added Successfuslly");
+                    alert("Message Added Successfully");
                 })
                     .catch(function (reason) {
                     alert("Some error occurred");

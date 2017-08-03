@@ -6,6 +6,13 @@ namespace SeleniumTests
     [TestClass]
     public class MessageListPageTests
     {
+        [TestInitialize]
+        public void SetUp()
+        {
+            Browser.Open();
+        }
+
+
         [TestMethod]
         public void Can_Go_To_MessageList_Page()
         {
@@ -14,11 +21,12 @@ namespace SeleniumTests
         }
 
         [TestMethod]
-        public void Can_Go_To_AddMessage_Page()
+        public void Can_Go_To_AddMessage_Page_From_MessageList_Page()
         {
             Pages.ListPage.Goto();
             Pages.ListPage.SelectAddMessage();
-            Assert.IsTrue(Pages.AddMessagePage.IsAtAddMessagePage());
+            System.Threading.Thread.Sleep(5000);
+            Assert.IsTrue(Pages.AddMessagePage.IsAt());
         }
 
 
@@ -41,7 +49,7 @@ namespace SeleniumTests
         [TestCleanup]
         public void CleanUp()
         {
-            //Browser.Close();
+            Browser.Close();
         }
     }
 

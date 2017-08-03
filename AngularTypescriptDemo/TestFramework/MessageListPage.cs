@@ -1,4 +1,3 @@
-using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
@@ -30,6 +29,11 @@ namespace TestFramework
             get { return lastMsgLabel.Text; }
         }
 
+        public string LabelText
+        {
+            get { return msgListLabel.Text; }
+        }
+
         public bool IsAt()
         {
             return Browser.Title == PageTitle;
@@ -43,15 +47,13 @@ namespace TestFramework
         public bool IsMessageListLabelOnPage()
         {
             Browser.Wait(8);
-            return msgListLabel.Text == MsgListLabel;
+            return LabelText == MsgListLabel;
         }
 
         public bool IsAtHundredMessage()
         {
-            var msgListPage = new  MessageListPage();
             Browser.Wait(8);
-            PageFactory.InitElements(Browser.Driver, msgListPage);
-            return msgListPage.LastMessageIdInList == LastMsgId;
+            return LastMessageIdInList == LastMsgId;
         }
     }
 }
