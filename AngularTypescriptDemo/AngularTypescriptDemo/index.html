@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="messageDemo">
 <head>
     <meta charset="utf-8" />
     <title>Angular with TypeScript</title>
     <link rel="stylesheet" href="content/bootstrap.css" type="text/css" />
+    <link href="content/accessibility.css" rel="stylesheet" />
 </head>
-<body ng-app="messageDemo">
+<body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -21,7 +22,9 @@
 
 
     <!-- Library Scripts-->
+    <script src="scripts/jquery-1.9.1.js"></script>
     <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-aria.js"></script>
     <script src="scripts/angular-mocks.js"></script>
     <script src="scripts/angular-resource.js"></script>
     <script src="scripts/angular-route.js"></script>
@@ -31,17 +34,19 @@
 
 
     <!--Domain Classes-->
-    <script src="app/domain/message.js"></script>
+    <script src="app/domain/Message.js"></script>
 
     <!--Services -->
     <script src="app/services/MessageService.js"></script>
 
     <!--Controllers-->
-    <script src="app/controllers/messageListCtrl.js"></script>
-    <script src="app/controllers/addMessageCtrl.js"></script>
+    <script src="app/controllers/MessageListCtrl.js"></script>
+    <script src="app/controllers/AddMessageCtrl.js"></script>
+    <script src="app/controllers/AccessibilityCtrl.js"></script>
 
     <!--Directives -->
-    <script src="app/directives/pageHeaderWidget.js"></script>
+    <script src="app/directives/PageHeaderWidget.js"></script>
 
+    <script src="scripts/accessibility.js"></script>
 </body>
 </html>

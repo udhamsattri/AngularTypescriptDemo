@@ -1,0 +1,137 @@
+﻿<div class="panel panel-primary">
+
+    <!-- Tabs Example-->
+    <div class="panel-heading">
+        Tab Panel
+    </div>
+    <div class="container">
+        <ul class="tablist" role="tablist">
+            <li id="tab1" class="tab" aria-controls="panel1" role="tab" aria-selected="true" tabindex="0" ng-click="acs.SetTab(1)">
+                Tab 1
+            </li>
+            <li id="tab2" class="tab" aria-controls="panel2" role="tab" aria-selected="false" tabindex="0" ng-click="acs.SetTab(2)">
+                Tab 2
+            </li>
+            <li id="tab3" class="tab" aria-controls="panel3" role="tab" aria-selected="false" tabindex="0" ng-click="acs.SetTab(3)">
+                Tab 3
+            </li>
+        </ul>
+
+
+        <div id="panel1" class="panel" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
+            <h3 tabindex="0">Tab 1</h3>
+            Tab 1 content here......
+        </div>
+
+        <div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel" aria-hidden="true">
+            <h3 tabindex="0">Tab 2</h3>
+            Tab 2 content here.....
+        </div>
+        <div id="panel3" class="panel" aria-labelledby="tab3" role="tabpanel" aria-hidden="true">
+            <h3 tabindex="0">Tab 3</h3>
+            Tab 3 content here
+        </div>
+    </div>
+
+    <!--Dialog Exmple-->
+
+    <div class="panel-heading">
+        Dialog Modal
+    </div>
+
+    <div class="container">
+        <input type="button" value="press to open dialog" id="login">
+
+        <div id="mydialog" aria-hidden="true" role="dialog" class="dialogclass" aria-labelledby="dialogheader">
+            <div class="whitebox">
+                <h1 id="dialogheader" tabindex="0">login</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-heading">
+        Grid Layout
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5" style="background-color:red;">Row1Col1</div>
+            <div class="col-xs-5" style="background-color:lavender;">Row1Col2</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5" style="background-color:lavenderblush;">Row2Col1</div>
+            <div class="col-xs-5" style="background-color:lightgrey;">Row2Col2</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5" style="background-color:lavenderblush;">Row3Col1</div>
+            <div class="col-xs-5" style="background-color:lightgrey;">Row2Col2</div>
+        </div>
+    </div>
+
+
+    <div class="panel-heading">
+        Button
+    </div>
+
+    <div class="container">
+        <button type="button" aria-pressed="false" ng-click="handleBtnClick(event)">
+            Native button toggle
+        </button>
+
+        <span role="button" tabindex="0"
+              aria-pressed="false" ng-click="handleBtnClick(event)">
+            Span button toggle
+        </span>
+    </div>
+
+
+    <div class="panel-heading">
+        Combo Box
+    </div>
+
+    <div class="container" style="height:180px;">
+        <!-- Navigation -->
+        <nav class="menu" id="a11y-menu" role="navigation" aria-label="Main menu">
+
+            <ul class="nav level-1 list-reset" role="menubar" aria-hidden="false">
+                <li class="has-subnav" role="menuitem" aria-haspopup="true">
+                    <a href="#about">About</a>
+                    <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
+                        <li role="menuitem"><a href="#news" tabindex="-1">News</a></li>
+                        <li role="menuitem"><a href="#governance" tabindex="-1">Governance</a></li>
+                        <li role="menuitem"><a href="#diversity" tabindex="-1">Diversity</a></li>
+                        <li role="menuitem"><a href="#contact" tabindex="-1">ContactUs</a></li>
+                    </ul>
+                </li>
+
+                <li role="menuitem" aria-haspopup="true">
+                    <a href="#academics">Academics</a>
+                    <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu" class="list-reset">
+                        <li role="menuitem"><a href="#programs" tabindex="-1">Degree Programs</a></li>
+                        <li role="menuitem"><a href="#faculty" tabindex="-1">Faculty</a></li>
+                        <li role="menuitem"><a href="#distance" tabindex="-1">Distance Learning</a></li>
+                        <li role="menuitem"><a href="#libs" tabindex="-1">Libraries</a></li>
+                    </ul>
+                </li>
+
+                <li role="menuitem" aria-haspopup="true">
+                    <a href="#admissions">Admissions</a>
+                    <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu" class="list-reset">
+                        <li role="menuitem"><a href="#undergraduate" tabindex="-1">Undergraduate</a></li>
+                        <li role="menuitem"><a href="#tuition" tabindex="-1">Tuition</a></li>
+                        <li role="menuitem"><a href="#financial-aid" tabindex="-1">Financial Aid</a></li>
+                    </ul>
+                </li>
+
+                <li role="menuitem" aria-haspopup="true">
+                    <a href="#visitors">Visitors</a>
+                    <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu" class="list-reset">
+                        <li role="menuitem"><a href="#events" tabindex="-1">Events</a></li>
+                        <li role="menuitem"><a href="#campus-map" tabindex="-1">Campus Map</a></li>
+                        <li role="menuitem"><a href="#parking" tabindex="-1">Parking</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

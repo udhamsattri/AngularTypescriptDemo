@@ -1,6 +1,6 @@
 ﻿module app {
     var main = angular.module("messageDemo",
-        ["ngRoute"]);
+        ["ngRoute","ngAria"]);
 
     main.config(routeConfig);
 
@@ -18,6 +18,11 @@
             {
                 templateUrl: 'app/views/addMessage.html',
                 controller: 'AddMessageCtrl as am'
+            })   
+            .when('/accessibility',
+            {
+                templateUrl: 'app/views/accessibility.html',
+                controller: 'AccessibilityCtrl as acs'
             })            
             .otherwise('/messageList');
     }

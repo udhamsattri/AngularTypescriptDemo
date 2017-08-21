@@ -22,11 +22,14 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\controllers\addMessageCtrl.ts" />
-    <TypeScriptCompile Include="app\controllers\messageListCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\AccessibilityCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\AddMessageCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\MessageListCtrl.ts" />
+    <Content Include="app\views\accessibility.html" />
     <Content Include="app\views\addMessage.html" />
     <Content Include="app\views\messageListView.html" />
     <Content Include="app\widgets\page-header-widget.html" />
+    <Content Include="content\accessibility.css" />
     <Content Include="content\bootstrap-theme.css" />
     <Content Include="content\bootstrap-theme.min.css" />
     <Content Include="content\bootstrap.css" />
@@ -169,13 +172,13 @@
     <Content Include="node_modules\mu2\test\run_examples_test.js" />
     <Content Include="node_modules\null-check\index.js" />
     <Content Include="node_modules\which\which.js" />
+    <Content Include="scripts\angular-aria.js" />
+    <Content Include="scripts\angular-aria.min.js" />
     <Content Include="scripts\angular-mocks.js" />
     <Content Include="scripts\angular-resource.js" />
     <Content Include="scripts\angular-resource.min.js" />
     <Content Include="scripts\angular-route.js" />
     <Content Include="scripts\angular-route.min.js" />
-    <Content Include="scripts\angular.js" />
-    <Content Include="scripts\angular.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -276,24 +279,30 @@
     <Content Include="node_modules\mu2\package.json" />
     <Content Include="node_modules\mu2\README.md" />
     <Content Include="node_modules\mu2\test.sh" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\angular-aria.min.js.map" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\accessibility.js" />
     <Content Include="scripts\jquery-1.9.1.js" />
     <Content Include="scripts\jquery-1.9.1.min.js" />
     <Content Include="SpecRunner.html" />
     <Content Include="web.config" />
+    <TypeScriptCompile Include="app\interfaces\IAccessibilityModel.ts" />
     <TypeScriptCompile Include="tests\messageServiceTest.ts" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
-    <TypeScriptCompile Include="app\directives\pageHeaderWidget.ts" />
-    <TypeScriptCompile Include="app\domain\iMessage.ts" />
-    <TypeScriptCompile Include="app\interfaces\iAddMessageModel.ts" />
-    <TypeScriptCompile Include="app\interfaces\iMessageListModel.ts" />
-    <TypeScriptCompile Include="app\domain\message.ts" />
-    <TypeScriptCompile Include="app\services\iMessageService.ts" />
-    <TypeScriptCompile Include="app\services\messageService.ts" />
+    <TypeScriptCompile Include="app\directives\PageHeaderWidget.ts" />
+    <TypeScriptCompile Include="app\domain\IMessage.ts" />
+    <TypeScriptCompile Include="app\interfaces\IAddMessageModel.ts" />
+    <TypeScriptCompile Include="app\interfaces\IMessageListModel.ts" />
+    <TypeScriptCompile Include="app\domain\Message.ts" />
+    <TypeScriptCompile Include="app\services\IMessageService.ts" />
+    <TypeScriptCompile Include="app\services\MessageService.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jasmine\index.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -306,7 +315,6 @@
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="tsconfig.json" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
